@@ -1,0 +1,24 @@
+# API Configuration (contains sensitive API keys)
+api-config.js
+
+# Node modules (if using npm packages)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+

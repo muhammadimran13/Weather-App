@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkySense - Weather Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="weather-default">
+  <div class="weather-app">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="logo-section">
+        <h1 class="app-logo" id="appLogo">🌤️ SkySense</h1>
+      </div>
+      <div class="search-section">
+        <div class="search-container">
+          <input type="text" id="cityInput" class="search-input" placeholder="Search city...">
+          <button class="icon-btn search-btn" id="searchBtn">⌕</button>
+        </div>
+        <button class="location-btn" id="locationBtn">📍 Current Location</button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Left: Hero Section -->
+      <section class="hero-section" id="heroSection">
+        <div class="hero-background">
+          <div class="weather-illustration" id="weatherIllustration"></div>
+        </div>
+        <div class="hero-content">
+          <div class="city-info">
+            <h2 class="city-name" id="cityName">Search a city</h2>
+            <div class="date-time" id="dateTime">-</div>
+          </div>
+          <div class="main-temp-container">
+            <div class="temp-display" id="currentTemp">-</div>
+            <div class="condition-text" id="currentCondition">-</div>
+            <div class="extra-temp-info" id="extraInfo">-</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Details Panel -->
+      <section class="details-panel">
+        <!-- Stats Cards -->
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat-card">
+            <div class="stat-icon">💨</div>
+            <div class="stat-content">
+              <div class="stat-label">Wind</div>
+              <div class="stat-value" id="windSpeed">-</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💧</div>
+            <div class="stat-content">
+              <div class="stat-label">Humidity</div>
+              <div class="stat-value" id="humidity">-</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👁</div>
+            <div class="stat-content">
+              <div class="stat-label">Visibility</div>
+              <div class="stat-value" id="visibility">-</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌡</div>
+            <div class="stat-content">
+              <div class="stat-label">Pressure</div>
+              <div class="stat-value" id="pressure">-</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hourly Forecast Chart -->
+        <div class="hourly-section">
+          <h3 class="section-title">Hourly Forecast</h3>
+          <div class="chart-container">
+            <canvas id="hourlyChart"></canvas>
+          </div>
+          <div class="hourly-scroll" id="hourlyScroll">
+            <!-- Hourly items will be added here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom: 10-Day Forecast -->
+    <section class="forecast-section">
+      <h3 class="section-title">10-Day Forecast</h3>
+      <div class="forecast-list" id="forecastList">
+        <!-- Forecast items will be added here -->
+      </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <footer class="bottom-bar">
+      <div class="last-updated" id="lastUpdated">-</div>
+      <div class="controls">
+        <button class="control-btn" id="unitToggle">°C</button>
+        <button class="control-btn" id="themeToggle">🌙</button>
+      </div>
+    </footer>
+
+    <!-- Error Message -->
+    <div class="error-message" id="errorMsg"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
