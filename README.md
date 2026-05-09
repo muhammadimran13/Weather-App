@@ -1,3 +1,8 @@
+# Made by Imran
+
+
+
+
 # 🌤️ SkySense - Weather Dashboard
 
 A beautiful, modern weather application with real-time weather data, dynamic backgrounds, and responsive design. Built with vanilla JavaScript, featuring glassmorphism UI, interactive charts, and automatic theme switching based on weather conditions.
